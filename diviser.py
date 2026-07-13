@@ -6,7 +6,7 @@ writer = PdfWriter()
 
 # 2. Définir vos intervalles (Format humain : [page_debut, page_fin])
 # Exemple : extrait de la page 2 à 5, puis de la page 10 à 15
-intervalles = [[134,134],[137,138]]
+intervalles = [[134,134],[137,140]]
 
 # 3. Extraire et fusionner
 for debut, fin in intervalles:
