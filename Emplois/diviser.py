@@ -1,12 +1,12 @@
 from pypdf import PdfReader, PdfWriter
 
 # 1. Ouvrir le fichier d'origine
-reader = PdfReader(r"C:\Users\Bmd\Documents\ISE\Cours\ISE3\Stage ITIE\rapports\donnée\0.-Rapport-final-ITIE-Senegal-2024-Version-Finale-VF221225-1.pdf")
+reader = PdfReader(r"C:\Users\Bmd\Documents\ISE\Cours\ISE3\Stage ITIE\rapports\donnée\Emplois\Rapport-ITIE-SENEGAL-2014-vf-1.pdf")
 writer = PdfWriter()
 
 # 2. Définir vos intervalles (Format humain : [page_debut, page_fin])
 # Exemple : extrait de la page 2 à 5, puis de la page 10 à 15
-intervalles = [[134,134],[137,140]]
+intervalles = [[110,111]]
 
 # 3. Extraire et fusionner
 for debut, fin in intervalles:
@@ -16,5 +16,5 @@ for debut, fin in intervalles:
         writer.add_page(page)
 
 # 4. Enregistrer le résultat
-with open(r"C:\Users\Bmd\Documents\ISE\Cours\ISE3\Stage ITIE\rapports\donnée\2024.pdf", "wb") as fichier_sortie:
+with open(r"C:\Users\Bmd\Documents\ISE\Cours\ISE3\Stage ITIE\rapports\donnée\Emplois\2014.pdf", "wb") as fichier_sortie:
     writer.write(fichier_sortie)
